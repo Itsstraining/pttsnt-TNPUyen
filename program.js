@@ -30,7 +30,7 @@ function findPrime(n) {
 
 function convert(n) {
   n = Number(n)
-  let arrPrime = findPrime(n);
+  let arrPrime = findPrime(100000);
   let result = '';
   let count = 0;
   for (let i = 0; i < arrPrime.length; i++) {
