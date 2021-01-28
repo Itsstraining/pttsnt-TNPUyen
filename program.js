@@ -31,20 +31,16 @@ function findPrime(n) {
 function convert(n) {
   n = Number(n);
   let arrPrime = findPrime(100000);
-  let result = '';
+  let result = [];
   let count = 0;
   for (let i = 0; i < arrPrime.length; i++) {
     while (n % arrPrime[i] == 0) {
-      if(result == ''){
-        result = `${arrPrime[i]}`
-      }else{
-        result = `${result} ${arrPrime[i]}`;
-      }
+      result.push(arrPrime[i]);
       n = n / arrPrime[i];
       count++;
     }
   }
-  return result;
+  return result.join(' ');
   
 }
 
