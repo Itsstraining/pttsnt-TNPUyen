@@ -30,8 +30,13 @@ function findPrime(n) {
 
 function convert(n) {
   n = Number(n);
-  let arrPrime = findPrime(100000);
   let result = [];
+  if(n == 0){
+    result.push(0);
+    return result.join()
+  }
+
+  let arrPrime = findPrime(100000);
   let count = 0;
   for (let i = 0; i < arrPrime.length; i++) {
     while (n % arrPrime[i] == 0) {
@@ -41,7 +46,6 @@ function convert(n) {
     }
   }
   return result.join(' ');
-  
 }
 
 module.exports = main;
